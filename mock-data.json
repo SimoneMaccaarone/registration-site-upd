@@ -1,0 +1,11 @@
+{
+    "userName": "superPippo", //(min3 char)*
+    "name": "pippo", //(min 3 char)*
+    "surname": "de pippis", //(min 3 char)*
+    "email": "superpippo@gmail.com", //(regex email)*
+    "password": "forzaCatania1", //(almeno 8 caratteri e la conferma)*
+    "yob": 2001,
+    "newsletterSub": true, // checkbox se ci si vuole iscrivere
+    "gender": "male",
+    "phone": "+393456789"
+}
