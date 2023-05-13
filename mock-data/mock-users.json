@@ -1,0 +1,35 @@
+[
+    {
+        "userName": "superPippo",
+        "name": "pippo",
+        "surname": "de pippis",
+        "email": "superpippo@gmail.com",
+        "password": "forzaCatania1",
+        "yob": 2001,
+        "newsletterSub": true,
+        "gender": "male",
+        "phone": "+393456789"
+    },
+    {
+        "userName": "plutino",
+        "name": "pluto",
+        "surname": "canis",
+        "email": "plutino@gmail.com",
+        "password": "forzaAtalanta1",
+        "yob": 2001,
+        "newsletterSub": false,
+        "gender": "male",
+        "phone": "+393456789"
+    },
+    {
+        "userName": "paperinaKiss",
+        "name": "paperina",
+        "surname": "de paperis",
+        "email": "paperina99@gmail.com",
+        "password": "forzaPaperopoli2",
+        "yob": 2001,
+        "newsletterSub": true,
+        "gender": "female",
+        "phone": "+393456789"
+    }
+]
