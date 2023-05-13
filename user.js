@@ -9,7 +9,7 @@ class User{
         this._yob = yob;
         this.newsletterSub = newsletterSub;
         this.gender = gender;
-        this_phone = phone;
+        this._phone = phone;
     };
 
 }
