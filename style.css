@@ -29,7 +29,7 @@ body {
     "T T T T T . . . M M"
     "T T T T T H . N V ."
     ". L . G . . P . E ."
-    "C C C . . . . . R ."
+    "C C C . . . . . . ."
     "C C C . . . . . . .";
 }
 
@@ -128,11 +128,6 @@ p {
     padding-bottom: 20px;
 }
 
-.required-text {
-    grid-area: R;
-    margin-top: 50px;
-}
-
 h1 {
     margin: 0px;
     margin-top: 30px;
@@ -183,43 +178,82 @@ li {
 
 .registration-box {
     position: absolute;
-    width: 600px;
-    height: 500px;
+    width: 1050px;
+    height: 430px;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
     border-radius: 10px;
-    background: linear-gradient(130deg, rgba(255,255,255,0.7) 3%, rgba(0,212,255,0.5) 30%,  rgba(9,9,121,0.5) 100%);
+    background: linear-gradient(150deg, rgba(255,255,255,0.8) 4%, rgba(0,212,255,0.5) 30%,  rgba(9,9,121,0.5) 100%);
     box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.8);
     padding: 40px;
-    margin-left: 50%;
-    margin-top: 15%;
+    margin-left: 30%;
+    margin-top: 18%;
     text-shadow: 0px 0px 6px rgba(9,9,121,0.8);
+}
+
+.input-container {
+    display: flex;
+}
+
+.left-box-registration, .right-box-registration {
+    width: 426px;
+    margin: auto;
 }
 
 .title-registration-box {
     font-size: 40px;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 span {
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 15px;
     text-align: center;
+    margin: 0px;
+    margin-bottom: 6px;
 }
 
 input {
-    margin: auto;
-    margin-bottom: 50px;
-    width: 300px;
-    height: 25px;
+    margin: 0px;
+    width: 220px;
+    height: 20px;
     border-radius: 5px;
     border: none;
     box-shadow: 0px 0px 6px rgba(9,9,121,0.8);
-    padding: 5px;
-    text-align: center;
+    padding: 5px 8px 5px;
+    float: right;
+    margin-top: 6px;
+}
+
+.gender-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 220px;
+    padding-top: 4px;
+}
+
+.newsletter-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 232px;
+    padding-top: 5px;
+}
+
+.gender-span {
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+    padding-right: 5px;
+}
+
+.newsletter-span {
+    margin-right: 50px;
 }
 
 img {
@@ -238,14 +272,16 @@ img {
 }
 
 .checkbox {
-    width: fit-content;
     margin: auto;
     cursor: pointer;
+    width: 14px;
+    height: 14px;
+    margin-right: 9px;
 }
 
 button {
     width: 100px;
-    margin: 50px auto 30px;
+    margin: 30px auto 20px;
     cursor: pointer;
     font-family: Glory, sans-serif;
     font-size: 25px;
@@ -337,6 +373,11 @@ h2 {
 
 @media screen and (max-width: 1800px){
 
+    .registration-body {
+        padding-top: 20px;
+        height: auto;
+    }
+
     .container {
         width: 97%;
         display: grid;
@@ -344,9 +385,9 @@ h2 {
         grid-template-rows: (5 / 1fr);
         grid-template-areas: 
         "T T T T T . . M M M"
-        "T T T T T . . N . ."
-        ". L . G . H P V E ."
-        "C C C . . . . . R ."
+        "T T T T T . . N P ."
+        ". L . G . H E V . ."
+        "C C C . . . . . . ."
         "C C C . . . . . . .";
     }
 
@@ -371,6 +412,48 @@ h2 {
         height: 180px;
     }
 
+    .first-sphere {
+        display: none;
+    }
+    
+    .second-sphere {
+        width: 240px;
+        height: 240px;
+    }
+
+    .third-sphere {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .third-sphere {
+        width: 160px;
+        height: 160px;
+        background: linear-gradient(105deg, rgba(255,255,255,1) 10%, rgba(0,212,255,0.6) 30%,  rgba(9,9,121,1) 100%);
+        box-shadow: 3px 1px 8px 0px rgba(0, 0, 0, 0.8);
+    }
+    
+    .fourth-sphere {
+        width: 290px;
+        height: 290px;
+        margin-bottom: 280px;
+    }
+    
+    .fifth-sphere {
+        width: 170px;
+        height: 170px;
+    }
+
+    .registration-box {
+        width: 1050px;
+        height: 430px;
+        padding: 40px;
+        margin-left: 17%;
+        margin-top: 20%;
+        background: linear-gradient(175deg, rgba(255,255,255,0.8) 4%, rgba(0,212,255,0.5) 30%,  rgba(9,9,121,0.5) 100%);
+        box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.8);
+    }
+
 }
 
 @media screen and (max-width: 1520px){
@@ -382,8 +465,8 @@ h2 {
         grid-template-rows: (5 / 1fr);
         grid-template-areas: 
         "T T T T T M M M M ."
-        "T T T T T . . N . ."
-        ". L . G . H P V E ."
+        "T T T T T P . . . ."
+        ". L . G . H . V E ."
         "C C C . . . . . R ."
         "C C C . . . . . . .";
     }
@@ -421,6 +504,14 @@ h2 {
         list-style: none;
         display: inline;
         margin-left: 50px;
+    }
+
+    .registration-box {
+        width: 1050px;
+        height: 430px;
+        padding: 40px;
+        margin-left: 13%;
+        margin-top: 22%;
     }
 
 }
@@ -475,6 +566,21 @@ h2 {
         margin-left: 50px;
     }
 
+    .registration-box {
+        width: 1050px;
+        height: 430px;
+        padding: 40px;
+        margin-left: 9%;
+        margin-top: 24%;
+        background: linear-gradient(177deg, rgba(255,255,255,0.8) 3%, rgba(0,212,255,0.5) 30%,  rgba(9,9,121,0.5) 100%);
+        box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.8);
+    }
+
+    .third-sphere {
+        background: linear-gradient(120deg, rgba(255,255,255,1) 14%, rgba(0,212,255,0.6) 30%,  rgba(9,9,121,1) 100%);
+        box-shadow: 3px 2px 8px 0px rgba(0, 0, 0, 0.8);
+    }
+
 }
 
 @media screen and (max-width: 1285px){
@@ -527,25 +633,17 @@ h2 {
         margin-left: 50px;
     }
 
+    .registration-box {
+        width: 1050px;
+        height: 430px;
+        padding: 40px;
+        margin-left: 5%;
+        margin-top: 26%;
+    }
+
 }
 
 @media screen and (max-width: 1180px){
-
-    /* #home-container {
-        width: 97%;
-        height: auto;
-        display: grid;
-        grid-template-columns: (8 / 1fr);
-        grid-template-rows: (7 / 1fr);
-        grid-template-areas: 
-        "T T T T M M M M"
-        "T T T T M . . ."
-        ". . . . . . . ."
-        "H V . . . . . ."
-        "H . . . . . . ."
-        ". . . . . . . ."
-        "C C C . . . . .";
-    } */
 
     body {
         height: auto;
@@ -582,61 +680,68 @@ h2 {
         height: 160px;
         margin: 40px;
     }
-
-}
-
-@media screen and (max-width: 1180px){
-
-    /* #home-container {
-        width: 97%;
-        height: auto;
-        display: grid;
-        grid-template-columns: (8 / 1fr);
-        grid-template-rows: (7 / 1fr);
-        grid-template-areas: 
-        "T T T T M M M M"
-        "T T T T M . . ."
-        ". . . . . . . ."
-        "H V . . . . . ."
-        "H . . . . . . ."
-        ". . . . . . . ."
-        "C C C . . . . .";
-    } */
-
-    body {
-        height: auto;
+    
+    .second-sphere {
+        width: 240px;
+        height: 240px;
+        margin-top: 10%;
+        margin-left: 65%;
+        background: linear-gradient(140deg, rgba(255,255,255,1) 16%, rgba(0,212,255,0.6) 30%,  rgba(9,9,121,1) 100%);
+        box-shadow: 3px 2px 8px 0px rgba(0, 0, 0, 0.8);
+    }
+    
+    .third-sphere {
+        width: 160px;
+        height: 160px;
+        background: linear-gradient(185deg, rgba(255,255,255,1) 16%, rgba(0,212,255,0.6) 30%,  rgba(9,9,121,1) 100%);
+        box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.8);
+    }
+    
+    .fourth-sphere {
+        width: 290px;
+        height: 290px;
+        margin-top: 90px;
+        margin-left: 35%;
+        margin-bottom: 50px;
+        background: linear-gradient(172deg, rgba(255,255,255,1) 4%, rgba(0,212,255,0.6) 30%,  rgba(9,9,121,1) 100%);
+        box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.8);
+    }
+    
+    .fifth-sphere {
+        width: 170px;
+        height: 170px;
+        margin-bottom: 60px;
+        display: none;
     }
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: center;
-        padding: 30px;
-    }
-
-    .home-box {
-        width: 400px;
-        height: 400px;
-        margin: 30px;
-        background: linear-gradient(175deg, rgba(255,255,255,0.7) 3%, rgba(0,212,255,0.6) 30%,  rgba(9,9,121,1) 100%);
+    .registration-box {
+        width: 1050px;
+        height: 430px;
+        padding: 40px;
+        margin-left: 0%;
+        margin-bottom: 30%;
+        background: linear-gradient(178deg, rgba(255,255,255,0.8) 3%, rgba(0,212,255,0.5) 30%,  rgba(9,9,121,0.5) 100%);
         box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.8);
     }
 
-    p {
-        color: white;
-        position: absolute;
-        font-size: 30px;
-        margin-top: 6%;
-        margin: 0px;
-        width: 60%;
-        text-shadow: 0px 0px 6px rgba(9,9,121,1);
+}
+
+@media screen and (max-width: 1115px) {
+
+    .registration-box {
+        width: 750px;
+        height: 600px;
+        padding: 40px;
+        margin-bottom: 20%;
     }
-    
-    .void-box {
-        width: 160px;
-        height: 160px;
-        margin: 40px;
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    .second-sphere {
+        background: linear-gradient(160deg, rgba(255,255,255,1) 12%, rgba(0,212,255,0.6) 30%,  rgba(9,9,121,1) 100%);
+        box-shadow: 2px 3px 8px 0px rgba(0, 0, 0, 0.8);
     }
 
 }
@@ -647,13 +752,45 @@ h2 {
         font-size: 120px;
     }
 
-}
-
-@media screen and (max-width: 840px) {
-
     .contacts {
         height: 200px;
         padding-top: 120px;
+    }
+
+    .second-sphere {
+        background: linear-gradient(150deg, rgba(255,255,255,1) 12%, rgba(0,212,255,0.6) 30%,  rgba(9,9,121,1) 100%);
+        box-shadow: 3px 2px 8px 0px rgba(0, 0, 0, 0.8);
+    }
+
+}
+
+@media screen and (max-width: 810px) {
+
+    .registration-box {
+        width: 600px;
+        height: 600px;
+        padding: 40px;
+        margin-bottom: 20%;
+    }
+
+}
+
+@media screen and (max-width: 660px) {
+
+    .registration-box {
+        width: 500px;
+        height: 600px;
+        padding: 40px;
+        margin-bottom: 20%;
+    }
+
+    .second-sphere {
+        width: 240px;
+        height: 240px;
+        margin-top: 10%;
+        margin-left: 45%;
+        background: linear-gradient(170deg, rgba(255,255,255,1) 10%, rgba(0,212,255,0.6) 30%,  rgba(9,9,121,1) 100%);
+        box-shadow: 3px 2px 8px 0px rgba(0, 0, 0, 0.8);
     }
 
 }
@@ -671,6 +808,59 @@ h2 {
     .contacts {
         height: 300px;
         padding-top: 220px;
+    }
+
+}
+
+@media screen and (max-width: 577px) {
+    
+    .registration-box {
+        width: 400px;
+        height: 1350px;
+        padding: 40px;
+        margin-top: 60%;
+    }
+
+    .left-box-registration, .right-box-registration {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    span {
+        display: block;
+    }
+
+    input {
+        margin-bottom: 20px;
+    }
+
+    .fourth-sphere {
+        margin-bottom: 500px;
+    }
+
+    #gender {
+        float: none;
+        margin: auto;
+    }
+
+    .gender-box {
+        flex-direction: column;
+        height: 200px;
+        padding: 20px;
+    }
+
+    #male-input, #female-input, #other-input {
+        position: relative;
+        bottom: 25px;
+        right: 20px;
+    }
+
+    .newsletter-box {
+        width: 120px;
     }
 
 }
@@ -711,6 +901,14 @@ h2 {
         height: 100px;
     }
 
+    .registration-box {
+        width: 400px;
+        height: 1350px;
+        padding: 40px;
+        margin-top: 10%;
+        background: linear-gradient(185deg, rgba(255,255,255,0.7) 2%, rgba(0,212,255,0.6) 30%,  rgba(9,9,121,1) 100%);
+    }
+
 }
 
 @media screen and (max-width: 510px) {
@@ -718,6 +916,35 @@ h2 {
     .contacts {
         height: 700px;
         padding-top: 600px;
+    }
+
+}
+
+@media screen and (max-width: 485px) {
+
+    .second-sphere {
+        width: 240px;
+        height: 240px;
+        margin-top: 10%;
+        margin-left: 25%;
+        margin-bottom: 200px;
+        background: linear-gradient(170deg, rgba(255,255,255,1) 10%, rgba(0,212,255,0.6) 30%,  rgba(9,9,121,1) 100%);
+        box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.8);
+    }
+    
+    .fourth-sphere {
+        width: 290px;
+        height: 290px;
+        margin-top: 90px;
+        margin-left: 15%;
+        margin-bottom: 0px;
+    }
+
+    .registration-box {
+        width: 320px;
+        height: 1400px;
+        padding: 40px;
+        margin-top: 50%;
     }
 
 }
@@ -747,6 +974,42 @@ h2 {
         height: 80px;
     }
 
+    .registration-box {
+        margin-top: 0%;
+    }
+
+    #registration-contacts {
+        position: relative;
+        bottom: 200px;
+    }
+
+}
+
+@media screen and (max-width: 410px) {
+
+    .second-sphere {
+        width: 200px;
+        height: 200px;
+        margin-top: 10%;
+        margin-left: 10%;
+        margin-bottom: 200px;
+    }
+    
+    .fourth-sphere {
+        width: 240px;
+        height: 240px;
+        margin-top: 90px;
+        margin-left: 5%;
+        margin-bottom: 0px;
+    }
+
+    .registration-box {
+        width: 320px;
+        height: 1400px;
+        padding: 40px;
+        margin-bottom: 0%;
+    }
+
 }
 
 @media screen and (max-width: 395px) {
@@ -766,6 +1029,33 @@ h2 {
         display: block;
         margin-left: 50px;
         margin-bottom: 15px;
+    }
+
+    .registration-box {
+        width: 290px;
+        height: 1400px;
+        padding: 40px;
+        margin-bottom: 90%;
+    }
+
+    #registration-2 {
+        font-size: 40px;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+
+    .registration-box {
+        width: 260px;
+        height: 1500px;
+        padding: 40px;
+        margin-bottom: 20%;
+    }
+
+    #registration-2 {
+        font-size: 30px;
+        margin-right: 80px;
     }
 
 }
@@ -789,6 +1079,37 @@ h2 {
 
 }
 
+@media screen and (max-width: 328px) {
+
+    .registration-box {
+        width: 240px;
+        height: 1500px;
+        padding: 40px;
+        margin-top: 0%;
+    }
+
+    input {
+        width: 180px
+    }
+
+    .second-sphere {
+        width: 180px;
+        height: 180px;
+        margin-top: 10%;
+        margin-left: 10%;
+        margin-bottom: 200px;
+    }
+    
+    .fourth-sphere {
+        width: 200px;
+        height: 200px;
+        margin-top: 90px;
+        margin-left: 5%;
+        margin-bottom: 0px;
+    }
+
+}
+
 @media screen and (max-width: 314px){
 
     .contacts {
@@ -799,6 +1120,10 @@ h2 {
 }
 
 @media screen and (max-width: 295px) {
+
+    .registration-body {
+        width: 100vw;
+    }
 
     h1 {
         font-size: 50px;
@@ -819,6 +1144,25 @@ h2 {
         height: 50px;
     }
 
+    .fourth-sphere {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 285px) {
+
+    .registration-box {
+        width: 220px;
+        height: 1500px;
+        padding: 40px;
+        margin-top: -80%;
+    }
+
+    .title {
+        width: 150px;
+    }
+
 }
 
 @media screen and (max-width: 280px){
@@ -826,6 +1170,258 @@ h2 {
     .contacts {
         height: 1800px;
         padding-top: 1700px;
+    }
+
+}
+
+/* List of users page */
+
+
+@media screen and (max-width: 1521px) {
+
+    .body-list {
+        height: fit-content;
+    }
+
+    .menu-list {
+        width: 400px;
+        margin: 0px;
+        margin-right: 3%;
+    }
+
+    #box-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(140deg, rgba(255,255,255,1) 15%, rgba(0,212,255,0.6) 30%, rgba(9,9,121,1) 100%);
+        box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.8);
+    }
+
+    .user-list {
+        margin: 0px;
+        padding-right: 40px;
+    }
+
+    #list-page-menu {
+        margin: 0px;
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+
+    #box-list {
+        background: linear-gradient(150deg, rgba(255,255,255,1) 15%, rgba(0,212,255,0.6) 30%, rgba(9,9,121,1) 100%);
+        box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.8);
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    #box-list {
+        background: linear-gradient(150deg, rgba(255,255,255,1) 15%, rgba(0,212,255,0.6) 30%, rgba(9,9,121,1) 100%);
+        box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.8);
+    }
+
+}
+
+@media screen and (max-width: 1055px) {
+
+    #box-list {
+        margin-top: 150px;
+    }
+
+}
+
+@media screen and (max-width: 930px) {
+
+    .list-title {
+        width: 60%;
+        margin: 0px;
+        position: absolute;
+    }
+
+    #box-list {
+        margin-top: 480px;
+        background: linear-gradient(165deg, rgba(255,255,255,1) 12%, rgba(0,212,255,0.6) 30%, rgba(9,9,121,1) 100%);
+        box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.8);
+    }
+
+    #list-page-menu {
+        position: relative;
+        top: 280px;
+        right: 500px;
+    }
+
+}
+
+@media screen and (max-width: 880px) {
+
+    #list-page-menu {
+        position: relative;
+        top: 280px;
+        right: 400px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    #list-page-menu {
+        position: relative;
+        top: 280px;
+        right: 300px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    #list-page-menu {
+        position: relative;
+        top: 280px;
+        right: 200px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    #list-page-menu {
+        position: relative;
+        top: 280px;
+        right: 100px;
+    }
+
+    #box-list {
+        width: 450px;
+        height: 450px;
+    }
+
+}
+
+@media screen and (max-width: 475px) {
+
+    #list-page-menu {
+        position: relative;
+        top: 280px;
+        right: 0px;
+    }
+
+    #box-list {
+        width: 400px;
+        height: 400px;
+        margin-top: 500px;
+        background: linear-gradient(173deg, rgba(255,255,255,1) 6%, rgba(0,212,255,0.6) 30%, rgba(9,9,121,1) 100%);
+        box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.8);
+    }
+
+    .user-box {
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width: 475px) {
+
+    #contacts {
+        padding-top: 200px;
+        height: fit-content;
+    }
+
+    #box-list {
+        width: 350px;
+        height: 350px;
+    }
+
+}
+
+@media screen and (max-width: 475px) {
+
+    #list-page-menu {
+        position: relative;
+        top: 280px;
+        left: 50px;
+        width: 200px;
+    }
+
+    #box-list {
+        width: 300px;
+        height: 300px;
+        margin-left: 0px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    li.user {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    #list-page-menu {
+        position: relative;
+        top: 280px;
+        left: 100px;
+    }
+
+    #box-list {
+        width: 100%;
+        height: 600px;
+        margin-left: 0px;
+        background: linear-gradient(170deg, rgba(255,255,255,1) 2%, rgba(0,212,255,0.6) 30%, rgba(9,9,121,1) 100%);
+        box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.8);
+    }
+
+    .user-box {
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 295px) {
+
+    .list-title {
+        font-size: 55px;
+    }
+
+    #box-list {
+        margin-top: 350px;
+    }
+
+    #list-page-menu {
+        top: 150px;
+        left: 150px;
+    }
+
+    .user-box {
+        width: 48%;
+    }
+
+}
+
+@media screen and (max-width: 270px) {
+
+    .list-title {
+        font-size: 55px;
+    }
+
+    #box-list {
+        margin-top: 400px;
+    }
+
+    #list-page-menu {
+        top: 200px;
+        left: 150px;
+    }
+
+    .user-box {
+        width: 50%;
     }
 
 }

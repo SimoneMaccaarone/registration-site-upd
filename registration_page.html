@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <title>SITE - New user registration</title>
 </head>
-<body>
+<body class="registration-body">
     <div class="container" id=" home-container">
         <div class="title">
-            <h1>NEW USER<br><span class="registration">REGISTRATION</span></h1>
+            <h1>NEW USER<br><span class="registration" id="registration-2">REGISTRATION</span></h1>
         </div>
         <div class="menu">
             <ul>
@@ -35,30 +35,46 @@
         </div>
         <div class='registration-box'>
             <h2 class="title-registration-box">INSERT YOUR DATA:</h2>
-            <span>*Name:</span>
-            <input id="name-input" type="text" placeholder="Insert name (min.3 char)">
-            <span>*Surname:</span>
-            <input id="surname-input" type="text" placeholder="Insert surname (min.3 char)">
-            <span>Gender:</span>
-            <input id="gender-input" type="text" placeholder="Insert gender">
-            <span>Year of birth:</span>
-            <input id="yob-input" type="text" placeholder="Insert year">
-            <span>*User name:</span>
-            <input id="user-name-input" type="text" placeholder="Insert user name">
-            <span>*Password:</span>
-            <input id="password-input" type="password" placeholder="Insert password (min.8 char)">
-            <span>*Confirm password:</span>
-            <input id="confirm-password-input" type="password" placeholder="Insert password (min.8 char)">
-            <span>*E-Mail:</span>
-            <input id="email-input" type="email" placeholder="Insert e-mail">
-            <span>Phone number:</span>
-            <input id="phone-input" type="text" placeholder="Insert phone number">
-            <span>Newsletter:</span>
-            <input id="news-letter-input" class="checkbox" type="checkbox">
+            <div class="input-container">
+                <div class="left-box-registration">
+                    <span>Name*:</span>
+                    <input id="name-input" type="text" placeholder="Insert name (min.3 char)"><br>
+                    <span>Surname*:</span>
+                    <input id="surname-input" type="text" placeholder="Insert surname (min.3 char)"><br>
+                    <span id="gender" style="float: left; margin-right: 130px;">Gender:</span>
+                    <div class="gender-box">
+                        <span class="gender-span">Male:</span>
+                        <input id="male-input" class="checkbox" type="checkbox">
+                        <span class="gender-span">Female:</span>
+                        <input id="female-input" class="checkbox" type="checkbox">
+                        <span class="gender-span">Other:</span>
+                        <input id="other-input" class="checkbox" type="checkbox">
+                    </div>
+                    <div style="clear: both;"></div>
+                    <span>Year of birth:</span>
+                    <input id="yob-input" type="text" placeholder="Insert year"><br>
+                    <span>User name*:</span>
+                    <input id="user-name-input" type="text" placeholder="Insert user name">
+                </div>
+                <div class="right-box-registration">
+                    <span>Password*:</span>
+                    <input id="password-input" type="password" placeholder="Insert password (min.8 char)"><br>
+                    <span>Confirm password*:</span>
+                    <input id="confirm-password-input" type="password" placeholder="Insert password (min.8 char)"><br>
+                    <span>E-Mail*:</span>
+                    <input id="email-input" type="email" placeholder="Insert e-mail"><br>
+                    <span>Phone number:</span>
+                    <input id="phone-input" type="text" placeholder="Insert phone number"><br>
+                    <div class="newsletter-box">
+                        <span  class="newsletter-span">Newsletter:</span>
+                        <input id="news-letter-input" class="checkbox" type="checkbox">
+                    </div>
+                </div>
+            </div>
             <button id="save-btn">SAVE</button>
+            <span><small>*Required field</small></span>
         </div>
-        <span class="required-text"><small>*Required field</small></span>
-        <div class="contacts">
+        <div class="contacts" id="registration-contacts">
             <div class="box-icon">
                 <a href=""><img src="./assets/facebook.svg" alt="Facebook"></a>
                 <a href=""><img src="./assets/instagram.svg" alt="Instagram"></a>
