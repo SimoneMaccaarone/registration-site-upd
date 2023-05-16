@@ -136,6 +136,14 @@ function createUser(){
     phonenumber.value= '';
    
 }
+
+function registrationSuccessfully() {
+
+    const messageDiv = document.getElementById('error-display');
+    const textMessage = document.createTextNode('Registration was successful! Thanks!');
+    messageDiv.appendChild(textMessage);
+
+}
    
 
    // /* * AGGIUNTE CHERUBINI **/

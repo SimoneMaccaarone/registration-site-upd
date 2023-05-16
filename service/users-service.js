@@ -22,7 +22,7 @@ class UsersService{
 
 //     static postUser(user){ 
 //         const jsonUser = JSON.stringify(user.toDbModel());
-//         return fetch(this.BASE_URL,{method: 'POST', headers: {'content-type':'application/json'}, body: jsonUser})
+//         return fetch(this.BASE_URL,{method: 'POST', headers: {'content-type':'application/json'}, body: jsonUser}).then(registrationSuccessfully());
 //     }
 
 // }
