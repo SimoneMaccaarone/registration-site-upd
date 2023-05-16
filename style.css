@@ -77,6 +77,14 @@ p {
 
 /* REGISTRATION PAGE */
 
+
+/* * AGGIUNTE CHERUBINI **/
+#error-display{
+    display: none;
+    text-shadow: 2px 2px 12px rgba(248, 248, 255, 0.8);
+    color: rgb(197, 0, 0);
+} 
+
 .first-sphere {
     grid-area: N;
     width: 360px;
