@@ -40,17 +40,19 @@ function displayListOfUsers(){
 //<button id="save-btn" onclick=" createUser()">SAVE</button>
 
 function createUser(){
-    const name=document.getElementById("name-input").value;
-    const surname=document.getElementById("surname-input").value;
+    const name=document.getElementById("name-input");
+    const surname=document.getElementById("surname-input");
     //const gender=document.getElementById("gender-input").checked; if checkbox, always value if text or radio
-    const gender=document.getElementById("gender-input").value;
-    const yob=document.getElementById("yob-input").value;
-    const username=document.getElementById("user-name-input").value;
-    const password=document.getElementById("password-input").value;
-    const password_check=document.getElementById("confirm-password-input").value;
-    const email=document.getElementById("email-input").value;
-    const phonenumber=document.getElementById("phone-input").value;
-    const _newsletter=document.getElementById("news-letter-input").checked;
+    const gendermale=document.getElementById("male-input");
+    const genderfemale=document.getElementById("female-input");
+    const genderother=document.getElementById("other-input");
+    const yob=document.getElementById("yob-input");
+    const username=document.getElementById("user-name-input");
+    const password=document.getElementById("password-input");
+    const password_check=document.getElementById("confirm-password-input");
+    const email=document.getElementById("email-input");
+    const phonenumber=document.getElementById("phone-input");
+    const _newsletter=document.getElementById("news-letter-input");
     //ADD A HIDDEN DIV!! <div id="error-display"></div> after REGISTRATION BOX in registration page, css display hidden
     const displayError=document.getElementById("error-display");
     displayError.style.display = "none";
@@ -67,38 +69,48 @@ function createUser(){
    
     console.log('test');
     displayError.innerHTML=``;
-       let errorStr='';
-    if(password !== password_check){
+    let errorStr='';
+    if(password.value !== password_check.value){
        errorStr+=`${errorStr === ''?'Caro utente,':''} la password non è confermata correttamente. `;
    }
-    if(password.length<8){
+    if(password.value.length<8){
        errorStr+=`${errorStr === ''?'Caro utente, l':'L'}a password deve essere almeno lunga 8 caratteri `;
     }
-    if(name.length<3 || surname.length<3 || username.length<3 ){
+    if(name.value.length<3 || surname.value.length<3 || username.value.length<3 ){
        errorStr+=`${errorStr === ''?'Caro utente, l':'L'}a informiamo che il nome, cognome e username richiedono un minimo di 3 caratteri per essere validi `;
     }
     const emailRegex = new RegExp('^(.+)@(.+)$')
-    if(!emailRegex.test(email)){
+    if(!emailRegex.test(email.value)){
        errorStr+=`${errorStr === '' ? 'Caro utente, l' : 'L'}a mail è incorretta `
     }
    
+    if (gendermale.checked) {
+        if(genderfemale.checked || genderother.checked){
+            errorStr+=`${errorStr === ''?'Caro utente, i':'I'}l genere selezionato può essere solo uno`
+        }
+    }
+
+    if (genderfemale.checked) {
+        if(gendermale.checked || genderother.checked){
+            errorStr+=`${errorStr === ''?'Caro utente, i':'I'}l genere selezionato può essere solo uno`
+        }
+    }
+
+    if (genderother.checked) {
+        if(genderfemale.checked || gendermale.checked){
+            errorStr+=`${errorStr === ''?'Caro utente, i':'I'}l genere selezionato può essere solo uno`
+        }
+    }
+
     if(errorStr===''){
-       const newUser = new User(username, name, surname, email, password, yob, _newsletter, gender, phonenumber);
+        const gender= gendermale.checked ? 'male': genderfemale.checked? 'female' : 'other';
+       const newUser = new User(username.value, name.value, surname.value, email.value, password.value, yob.value, _newsletter.checked, gender, phonenumber.value);
        newListOfUsers.addUser(newUser);
-       console.log(newUser);
+       console.log('newUser', newUser);
        console.log(newListOfUsers);
-       displayListOfUsers();
+       UsersService.postUser(newUser);
    
-       name.value= '';
-       surname.value= '';
-       gender.value= '';
-       yob.value= '';
-       username.value= '';
-       password.value= '';
-       password_check.value= '';
-       email.value= '';
-       phonenumber.value= '';
-       _newsletter.checked= false;
+ 
     }
      else
      {
@@ -106,10 +118,26 @@ function createUser(){
        displayError.style.display = 'block';
        displayError.innerHTML = errorStr;
      }
+          
+    name.value= '';
+    surname.value= '';
+    if(gendermale.checked) {
+        gendermale.checked = !gendermale.checked;
+    } else if(genderfemale.checked){
+        genderfemale.checked = !genderfemale.checked;
+    } else if(genderother.checked){
+        genderother.checked = !genderother.checked;
+    }
+    yob.value= '';
+    username.value= '';
+    password.value= '';
+    password_check.value= '';
+    email.value= '';
+    phonenumber.value= '';
    
+}
    
-   }
-   
+
    // /* * AGGIUNTE CHERUBINI **/
    // #error-display{
    //     display: none;
