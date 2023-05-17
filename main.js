@@ -1,4 +1,3 @@
-const newListOfUsers = new ListOfUsers()
 
 UsersService.getUsersServive().then(data => {
     fillUsersToList(data);
