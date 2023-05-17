@@ -317,6 +317,10 @@ button:active {
 
 /* LIST PAGE */
 
+.registration-body {
+    height: 100vh;
+}
+
 .list-container {
     width: 97%;
     height: 98%;
